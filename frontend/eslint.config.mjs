@@ -1,6 +1,9 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 // Flat-config replacement for the legacy .eslintrc.json that used to back
 // `next lint`. Next.js 16 removed `next lint`, so the `lint` script now runs
